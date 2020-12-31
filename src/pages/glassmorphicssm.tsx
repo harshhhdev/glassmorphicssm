@@ -1,10 +1,9 @@
 import React from "react"
-import * as GHPages from "gh-pages"
 
 import SEO from "../components/seo"
 
-import SettingsPanel from "./../components/settings/settings"
-import Glass from "./../components/glass/glass"
+import SettingsPanel from "../components/settings/settings"
+import Glass from "../components/glass/glass"
 
 import "./../styling/main.css"
 
@@ -26,17 +25,6 @@ const IndexPage = () => (
     <SettingsPanel />
     <Glass />
   </div>
-)
-
-GHPages.publish(
-  "dist",
-  {
-    branch: "master",
-    repo: "https://github.com/harshhhdev/glassmorphicssm.git",
-  },
-  function (err) {
-    if (err) console.log(err)
-  }
 )
 
 export default IndexPage
