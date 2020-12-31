@@ -3,9 +3,12 @@
   "private": true,
   "description": "Generate customisable CSS for all your glasmorphism needs.",
   "version": "0.1.0",
+  "homepage": "https://github.com/harshhhdev/glassmorphicssm",
   "author": "Harsh Singh",
   "dependencies": {
     "@types/styled-components": "^5.1.7",
+    "child_process": "^1.0.2",
+    "fs": "^0.0.1-security",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-manifest": "^2.6.1",
@@ -36,7 +39,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d public"
   },
   "repository": {
     "type": "git",

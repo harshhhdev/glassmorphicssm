@@ -1,4 +1,5 @@
 import React from "react"
+import * as GHPages from "gh-pages"
 
 import SEO from "../components/seo"
 
@@ -25,6 +26,17 @@ const IndexPage = () => (
     <SettingsPanel />
     <Glass />
   </div>
+)
+
+GHPages.publish(
+  "dist",
+  {
+    branch: "master",
+    repo: "https://github.com/harshhhdev/glassmorphicssm.git",
+  },
+  function (err) {
+    if (err) console.log(err)
+  }
 )
 
 export default IndexPage
